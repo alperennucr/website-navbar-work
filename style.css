@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    font-family: sans-serif;
+}
+
+.menu-bar{
+    background-color: #5b71b5;
+}
+
+.menu-bar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu-bar ul li{
+    margin: 15px;
+    padding: 15px; /* çok akıllıca lan*/
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-bar ul li a i{
+    margin-right: 10px;
+}
+
+.active, .menu-bar ul li:hover{   /* , var dikkat */
+    background-color: orange;
+    border-radius: 7px;
+    transition: .2s;
+}
+
+.sub-menu{
+    display: none;
+    margin-left: -15px;
+    align-items: flex-start;
+}
+
+.sub-menu ul li{
+    border-bottom: solid 1px white;
+}
+
+.sub-menu ul li:hover{
+    border-radius: 0px;
+    transition: .6s;
+    border-color: cyan;
+    background-color: transparent;
+}
+
+.sub-menu ul li a:hover{
+    color: yellow;
+}
+
+.menu-bar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background-color: #5b71b5;
+    margin-top: 15px;
+    
+}
+
+.menu-bar ul li:hover .sub-menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-bar ul li:hover .sub-menu ul li{
+    cursor: pointer;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sub-menu ul li a i{
+    margin-left: 5px;
+}
+
+.sub-inside{
+    display: none;
+}
+
+#social:hover .sub-inside{
+    display: block;
+    position: absolute;
+    background-color: #5b71b5;
+    margin-top: 15px;
+    left: 165px;
+    top: 60px;
+}
+
+#Apps:hover .sub-inside{
+    display: block;
+    position: absolute;
+    background-color: #5b71b5;
+    margin-top: 15px;
+    left: 165px;
+    top: 120px;
+}
